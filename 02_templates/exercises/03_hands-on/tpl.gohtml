@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+{{range .}}
+    {{.Name}}
+    {{.Address}} - {{.City}} - Zip({{.Zip}})
+    {{if .Region.Southern}}
+    <h5> Southern Region </h5>
+    {{else}}{{if .Region.Central}}
+    <h5> Central Region </h5>
+    {{else}}
+    <h5> Northern Region </h5>
+    {{end}}{{end}}
+
+{{end}}
+
+</body>
+</html>
